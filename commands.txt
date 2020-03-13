@@ -1,0 +1,3 @@
+Commands:
+  create-react-app _appName_: creates a react app
+  npm run (in project directory): lists available scripts
