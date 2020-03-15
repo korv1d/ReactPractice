@@ -8,3 +8,9 @@ Dependencies:  Node.js  NPM  babel  babel-c webpack webpack-dev-server  react  r
       cd into folder you want to store project in  
       create-react-app _project_name_  
       To run:  cd into project folder  npm start
+
+    Commands:
+  create-react-app _appName_: creates a react app
+  npm run (in project directory): lists available scripts
+  npm start: creates a development server for app and creates a browser instance
+
