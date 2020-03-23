@@ -1,20 +1,33 @@
 import React from 'react';
 import logo from './logo.svg';
+import inigo from './inigoMontoya.jpg';
 import './App.css';
 //Testing comments
 function App() {
+  //returns html contents to index.js' App parameter
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={inigo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Inigo Montoya's guide to networking success:
         </p>
-        <ul>
-          <li> Kono </li>
-          <li> Dio </li>
-          <li> Da! </li>
-        </ul>
+        <ol>
+          <li> Polite greeting </li>
+          <li> Introduce yourself </li>
+          <li> Relevant personal link </li>
+          <li> Manage expectations </li>
+        </ol>
+        <p>
+          e.g.<br/><br/>
+      
+          Hello<br/>
+          My name is Inigo Montoya<br/>
+          You killed my father<br/>
+          Prepare to die
+
+        </p>
+
         <a
           className="App-link"
           href="https://imgur.com/gallery/klVL7XQ"
