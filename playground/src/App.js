@@ -10,6 +10,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <ul>
+          <li> Kono </li>
+          <li> Dio </li>
+          <li> Da! </li>
+        </ul>
         <a
           className="App-link"
           href="https://imgur.com/gallery/klVL7XQ"
