@@ -1,8 +1,9 @@
-//each App file should contain only one React component
+//each App file should contain only one React components
 
 import React from 'react';
 import logo from './logo.svg';
 import inigo from './inigoMontoya.jpg';
+import Footer from './Footer';
 import './App.css';
 //Testing comments
 function App() {
@@ -12,15 +13,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Inigo Montoya's guide to networking success:
-        </p>
-        <ol>
-          <li> Polite greeting </li>
-          <li> Introduce yourself </li>
-          <li> Relevant personal link </li>
-          <li> Manage expectations </li>
-        </ol>
+		
+		<p>
+		  Inigo Montoya's guide to networking success:
+		</p>
+		
+		<Footer />
+		
+		<ol>
+		  <li> Polite greeting </li>
+		  <li> Introduce yourself </li>
+		  <li> Relevant personal link </li>
+		  <li> Manage expectations </li>
+		</ol>
+		
         <p>
           e.g.<br/><br/>
       
@@ -28,8 +34,9 @@ function App() {
           My name is Inigo Montoya<br/>
           You killed my father<br/>
           Prepare to die
-
         </p>
+		
+		<Footer />
 
         <a
           className="App-link"
