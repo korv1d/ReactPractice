@@ -1,3 +1,5 @@
+//each App file should contain only one React component
+
 import React from 'react';
 import logo from './logo.svg';
 import inigo from './inigoMontoya.jpg';
@@ -6,6 +8,7 @@ import './App.css';
 function App() {
   //returns html contents to index.js' App parameter
   return (
+    //always wrap adjacent tags in a div, will cause error otherwise
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
