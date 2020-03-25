@@ -12,12 +12,13 @@ function App() {
   return (
     //always wrap adjacent tags in a div, will cause error otherwise
     <div className="App">
-      <header className="App-header">
+	  <NavBar />
+	  <header className="App-header">
 	  
-		<NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
 		
-      </header>
+		<img src={logo} className="App-logo" alt="logo" />
+		
+	  </header>
     </div>
   );
 }
