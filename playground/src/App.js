@@ -3,8 +3,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import inigo from './inigoMontoya.jpg';
-import Footer from './Footer.js';
-import NavBar from './NavBar.js';
+import Footer from './components/Footer.js';
+import NavBar from './components/NavBar.js';
 import './App.css';
 //Testing comments
 function App() {
