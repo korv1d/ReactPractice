@@ -1,3 +1,5 @@
+/*checkout CSS grid and flexbox maybe?*/
+
 .App {
   text-align: center;
 }
@@ -66,3 +68,57 @@
   background-color: #325aa8;
   color: white;
 }
+
+.toDoList {
+  color: #333;
+}
+
+.Joseph{
+  height: 240px;
+  width: 340px;
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.DIO{
+  height: 240px;
+  width: 340px;
+}
+
+.Bizarre {
+  position:relative;
+/*  height:60px;
+  width:80px;
+  margin:0 auto;*/
+}
+
+.Bizarre img {
+  position:absolute;
+/*  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;*/
+}
+
+/*.Bizarre img.top:hover {
+  opacity:0;
+}*/

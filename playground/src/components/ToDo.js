@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 function ToDo() {
 	return (
 	
-		<div>
+		<div class="toDoList">
 			<input type = "checkbox" />
 			<p> Item 1 </p>
 			
