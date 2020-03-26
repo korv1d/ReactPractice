@@ -8,10 +8,9 @@ function Main(){
 	const lastName = "Joestar";
 	
 	return(
-		<div class = "Bizarre">
-			<img src={JoJo} className="Joseph" />
-			<img src={DIO} className="DIO" />
-			<h6> Jikoshi wo kai sasate morou, ore na wa {firstName + " " + lastName}</h6>
+		<div id="cf">
+			<img class="bottom" src={DIO} />
+			<img class="top" src={JoJo} />
 		</div>
 	);
 }
