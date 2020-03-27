@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.cartLogo {
+  height:8%;
+  width: 8%;
+}
