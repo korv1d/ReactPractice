@@ -5,7 +5,9 @@ function Help() {
 	return(
 		<div>
 			<p>How can you help? </p>
-			<button type="button">Click Me!</button>
+		    <button type="button">
+		        Click Me!
+		    </button>
 		</div>
 	);
 }
