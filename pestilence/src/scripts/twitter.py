@@ -14,9 +14,9 @@ def OAuth(botID):
 		print(consumer_key[botID])
 		auth = tweepy.OAuthHandler(consumer_key[botID], consumer_secret[botID])
 		auth.set_access_token(access_token[botID], access_token_secret[botID])
-		pritn(consumer_secret[botID])
-		pritn(access_token[botID])
-		pritn(access_token_secret[botID])
+		print(consumer_secret[botID])
+		print(access_token[botID])
+		print(access_token_secret[botID])
 
 	except Exception as e:
 		return None
