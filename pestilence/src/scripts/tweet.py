@@ -21,24 +21,25 @@ def getNewStory(botID, exhausted, tweetlist, counter):
 	else:
 		exhausted.append(R)
 		return(tweetlist[R])
-	# return("Hello!" + str(botID))
 
-#create authentification instance
-# for botID in range(4):
-# 	t = Twitter(auth=OAuth(access_token[botID], access_token_secret[botID],consumer_key[botID], consumer_secret[botID]))
-# 	statusUpdate = "LAhacks tweepyAPI constant delay (300) status update " + appendNames[botID]
-# 	t.statuses.update(status=statusUpdate)
-# 	time.sleep(300)
-exhausted = [ [], [], [], [] ]
-print(tweetList)
+def main():
+	exhausted = [ [], [], [], [] ]
+	
+	while(True):
+		time.sleep(15)
+		botID = random.randint(0,3)
+		statusUpdate = getNewStory(botID, exhausted[botID], tweetList, 0)
+		if statusUpdate == "FAIL":
+			print("all done! closing!")
+			exit(1)
+		statusUpdate = "Bot " + appendNames[botID] + ". Running LAhacks tweet.py on script " + statusUpdate
+		print(statusUpdate)
+		try:
+			#create authentification instance
+			t = Twitter(auth=OAuth(access_token[botID], access_token_secret[botID],consumer_key[botID], consumer_secret[botID]))
+			t.statuses.update(status=statusUpdate)
+		except:
+			print("An error occured. Your tweet was probably too long")
 
-while(True):
-	time.sleep(1)
-	botID = random.randint(0,3)
-	statusUpdate = getNewStory(botID, exhausted[botID], tweetList, 0)
-	if statusUpdate == "FAIL":
-		print("all done! closing!")
-		exit(1)
-	print(statusUpdate)
-# for i in range(len(storyList)):
-# 	print(storyList[i])
+if __name__ == '__main__':
+    main()
