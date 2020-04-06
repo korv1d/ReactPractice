@@ -1,0 +1,6 @@
+What We've done:
+
+created new react project with create-react-app
+created new firebase project
+created two new collections in firebase
+	deleted their document-IDs
