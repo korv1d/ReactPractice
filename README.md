@@ -1,4 +1,4 @@
-Dependencies:  Node.js  NPM  babel  babel-c webpack webpack-dev-server  react  react-dom  babel-core  babel-loader babel-preset-react  babel-preset-es2015
+Dependencies:  Node.js  firebase  NPM  babel  babel-c webpack webpack-dev-server  react  react-dom  babel-core  babel-loader babel-preset-react  babel-preset-es2015
 
     Usefull resources:  
     https://scotch.io/starters/react/using-create-react-app-to-make-react-applications
