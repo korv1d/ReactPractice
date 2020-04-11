@@ -4,3 +4,5 @@ created new react project with create-react-app
 created new firebase project
 created two new collections in firebase
 	deleted their document-IDs
+under 'project overview' in firebase, clicked add project
+	copied code from the provided snippet
