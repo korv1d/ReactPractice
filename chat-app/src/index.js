@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+
+import LoginComponent from './login/login.js';
+import SignupComponent from './signup/signup.js';
+import DashboardComponent from './dashboard/dashboard.js';
+
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
@@ -18,6 +22,14 @@ firebase.initializeApp({
   appId: "1:983991027486:web:6a40d6cf05b7d71a532b0f",
   measurementId: "G-17F5XG7NLK"
 })
+
+const routing = (
+  <Router>
+    <div id='routing-container'>
+      <Route path='/login' component={LoginComponent}></Route>
+    </div>
+  </Router>
+);
 
 ReactDOM.render(<div>Hello World</div>,
   // <React.StrictMode>
