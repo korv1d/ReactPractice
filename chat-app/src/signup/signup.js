@@ -46,7 +46,7 @@ class SignupComponent extends React.Component {
                             <InputLabel htmlFor = 'signup-password-confirm-input'>Confirm Your Password</InputLabel>
                             <Input type='password' onChange={(e) => this.userTyping('password-confirm', e)} id = 'signup-password-confirm-input'></Input>
                         </FormControl>
-                        <Button type='submit' variant='contained' color='primary' className={classes.submit}Submit></Button>
+                        <Button type='submit' variant='contained' color='primary' className={classes.submit}Submit>Create Account</Button>
                     </form>
                     <Typography component='h5' variant='h6' className={classes.hasAccountHear}>Already Have An Account?</Typography>
                     <Link className={classes.logInLink} to='/login'>Log in here!</Link>
