@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import styles from './styles';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -21,9 +23,7 @@ class SignupComponent extends React.Component {
 
         return(
             <main className = {classes.main}>
-                <CssBaseline>
-                    
-                </CssBaseline>
+                <CssBaseline></CssBaseline>
                 <Paper className={classes.Paper}>
                     <Typography components='h1' variant='h5'>
                         Sign up!
@@ -46,7 +46,10 @@ class SignupComponent extends React.Component {
                             <InputLabel htmlFor = 'signup-password-confirm-input'>Confirm Your Password</InputLabel>
                             <Input type='password' onChange={(e) => this.userTyping('password-confirm', e)} id = 'signup-password-confirm-input'></Input>
                         </FormControl>
+                        <Button type='submit' variant='contained' color='primary' className={classes.submit}Submit></Button>
                     </form>
+                    <Typography component='h5' variant='h6' className={classes.hasAccountHear}>Already Have An Account?</Typography>
+                    <Link className={classes.logInLink} to='/login'>Log in here!</Link>
                 </Paper>
             </main>
         );
