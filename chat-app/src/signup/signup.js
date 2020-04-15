@@ -36,6 +36,16 @@ class SignupComponent extends React.Component {
                             {/* onChange = whenever user is typing, call this function */}
                             <Input autoComplete='email' onChange={(e) => this.userTyping('email', e)} autofocus id='signup-email-input'></Input>
                         </FormControl>
+
+                        <FormControl required fullWidth margin='normal'>
+                            <InputLabel htmlFor = 'signup-password-input'>Create A Password</InputLabel>
+                            <Input type='password' onChange={(e) => this.userTyping('password', e)} id = 'signup-password-input'></Input>
+                        </FormControl>
+
+                        <FormControl required fullWidth margin='normal'>
+                            <InputLabel htmlFor = 'signup-password-confirm-input'>Confirm Your Password</InputLabel>
+                            <Input type='password' onChange={(e) => this.userTyping('password-confirm', e)} id = 'signup-password-confirm-input'></Input>
+                        </FormControl>
                     </form>
                 </Paper>
             </main>
