@@ -25,7 +25,7 @@ class SignupComponent extends React.Component {
             <main className = {classes.main}>
                 <CssBaseline></CssBaseline>
                 <Paper className={classes.Paper}>
-                    <Typography components='h1' variant='h5'>
+                    <Typography align='left' components='h1' variant='h5'>
                         Sign up!
                     </Typography>
                     {/* by defualt submit event is passed as arg */}
@@ -49,6 +49,7 @@ class SignupComponent extends React.Component {
                         <Button type='submit' variant='contained' color='primary' className={classes.submit}Submit>Create Account</Button>
                     </form>
                     <Typography component='h5' variant='h6' className={classes.hasAccountHear}>Already Have An Account?</Typography>
+                    {/* <Button className={classes.logInLink} to='/login'>Log in here!</Button> */}
                     <Link className={classes.logInLink} to='/login'>Log in here!</Link>
                 </Paper>
             </main>
