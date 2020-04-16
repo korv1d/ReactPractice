@@ -59,6 +59,13 @@ class SignupComponent extends React.Component {
                         </FormControl>
                         <Button type='submit' variant='contained' color='primary' className={classes.submit}Submit>Create Account</Button>
                     </form>
+                    {
+                        //if not an empty string: display error, otherwise return null
+                        this.state.signupError ? 
+                        <Typography component='h5' variant='h6' className = 'classes.errorText'>
+                            {this.state.signupError}
+                        </Typography> : null
+                    }
                     <Typography component='h5' variant='h6' className={classes.hasAccountHear}>Already Have An Account?</Typography>
                     {/* <Button className={classes.logInLink} to='/login'>Log in here!</Button> */}
                     <Link className={classes.logInLink} to='/login'>Log in here!</Link>
