@@ -39,3 +39,9 @@ ReactDOM.render(routing, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+// https://console.firebase.google.com/u/0/project/im-tutorial-bbb9b/overview
+// https://github.com/Zackazt/React-Chat-Tutorial/blob/master/src/Signup/styles.js
+// https://www.youtube.com/watch?v=uAu4iu8PTZs
+
