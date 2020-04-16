@@ -75,11 +75,30 @@ class SignupComponent extends React.Component {
     }
 
     userTyping = (type, e) => {
-        console.log(type, e);
+        // console.log(type, e);
+        switch(type){
+            case 'email':
+                //set email in constructor to current onChange value
+                this.setState({ email: e.target.value })
+                break;
+            
+            case 'password':
+                this.setState({ password: e.target.value })
+                break;
+        
+            case 'passwordConfirm':
+                this.setState({ passwordConfirm: e.target.value })
+                break;
+
+            default:
+                break;
+        }
     }
 
     submitSignup = (e) => {
-        console.log("submitting");
+        //by default, submitting form refreshes page
+        e.preventDefault();
+        console.log("submitting", this.state);
     }
 }
 
