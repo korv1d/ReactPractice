@@ -17,6 +17,17 @@ const firebase = require('firebase');
 
 class SignupComponent extends React.Component {
 
+    constructor() {
+        super();
+        //whenever state updates, rerender component
+        this.state = {
+            email: null,
+            password: null,
+            passwordConfirm: null,
+            signupError: ''
+        };
+    }
+
     render() {
         //destructuring. can use classes. instead of this.props.classes
         const { classes } = this.props;
