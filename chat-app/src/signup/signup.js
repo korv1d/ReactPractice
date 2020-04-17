@@ -74,6 +74,11 @@ class SignupComponent extends React.Component {
         );
     }
 
+
+    passwordsMatch = () => {
+        return(this.state.password === this.state.passwordConfirm);
+    }
+
     userTyping = (type, e) => {
         // console.log(type, e);
         switch(type){
@@ -98,7 +103,15 @@ class SignupComponent extends React.Component {
     submitSignup = (e) => {
         //by default, submitting form refreshes page
         e.preventDefault();
-        console.log("submitting", this.state);
+        
+        if(!this.passwordsMatch()){
+            this.setState({ signupError: 'passwords do not match!' });
+            return;
+        }
+
+        
+
+
     }
 }
 
