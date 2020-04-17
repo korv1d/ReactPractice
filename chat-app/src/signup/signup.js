@@ -118,10 +118,15 @@ class SignupComponent extends React.Component {
             };
             firebase.firestore().collection('users').doc(this.state.email).set(userObj).then(() => {
                 this.props.history.push('/dashboard')
+            }, dbError => {
+                console.log('database error', dbError);
+                this.setState({ signupError: 'failed to update databasex' });
             })
-        }
-
-
+        },
+        authError => {
+            console.log('authorization error', authError);
+            this.setState({ signupError: 'failed to add user' });
+        })
     }
 }
 
