@@ -22,10 +22,31 @@ class LoginComponent extends React.Component {
             <main className={classes.main}>
                 <CssBaseline></CssBaseline>
                 <Paper className={ classes.paper}>
-                    
+                    <Typography component='h1' variant='h5'>
+                        Log in page!
+                    </Typography>
+                    <form className={classes.form} onSubmit={(e) => this.submitLogin(e)}>
+                        <FormControl required fullWidth margin='normal'>
+                            <InputLabel htmlFor='login-email-input'>Enter Your Email</InputLabel>
+                            <Input autoComplete='email' autoFocus id='login-email-input' onChange={(e) => this.userTyping('email', e)}></Input>
+                        </FormControl>
+                        <FormControl required fullWidth margin='normal'>
+                            <InputLabel htmlFor='login-password-input'>Enter Your Password</InputLabel>
+                            <Input type='password' autoComplete='password' autoFocus id='login-password-input' onChange={(e) => this.userTyping('password', e)}></Input>
+                        </FormControl>
+                        <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>Login</Button>
+                    </form>
                 </Paper>
             </main>
         );
+    }
+
+    userTyping = (type, e) => {
+        console.log(type, e);
+    }
+
+    submitLogin = (e) => {
+        console.log('SUBMITTING');
     }
 }
 
