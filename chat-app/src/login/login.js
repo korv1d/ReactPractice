@@ -21,7 +21,7 @@ class LoginComponent extends React.Component {
             email: null,
             password: null,
             loginError: ''
-        }
+        };
     }
 
     render() {
@@ -64,9 +64,11 @@ class LoginComponent extends React.Component {
             case 'email':
                 this.setState({ email: e.target.value });
                 break;
-            case 'email':
+
+            case 'password':
                 this.setState({ password: e.target.value });
                 break;
+
             default:
                 break;
         }
@@ -74,7 +76,13 @@ class LoginComponent extends React.Component {
 
     submitLogin = (e) => {
         e.preventDefault();
-        console.log('SUBMITTING', this.state);
+        
+        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() => {
+            this.props.history.push('/dashboard');
+        }, err => {
+            this.setState({ loginError: 'Server error'});
+            console.log(err);
+        });
     }
 }
 
