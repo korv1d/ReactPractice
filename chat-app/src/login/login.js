@@ -36,6 +36,8 @@ class LoginComponent extends React.Component {
                         </FormControl>
                         <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>Login</Button>
                     </form>
+                    <Typography component='h5' variant='h6' className={classes.noAccountHeader}>Don't Have An Account?</Typography>
+                    <Link className={classes.signUpLink} to='/signup'>Sign Up!</Link>
                 </Paper>
             </main>
         );
