@@ -15,6 +15,15 @@ const firebase = require("firebase");
 
 class LoginComponent extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            email: null,
+            password: null,
+            loginError: ''
+        }
+    }
+
     render() {
 
         const { classes } = this.props;
@@ -36,6 +45,13 @@ class LoginComponent extends React.Component {
                         </FormControl>
                         <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>Login</Button>
                     </form>
+                    {
+                        this.state.loginError ?
+                        <Typography component='h5' variant='h6' className={classes.errorText}>
+                            Incorrect Login Information
+                        </Typography> :
+                        null
+                    }
                     <Typography component='h5' variant='h6' className={classes.noAccountHeader}>Don't Have An Account?</Typography>
                     <Link className={classes.signUpLink} to='/signup'>Sign Up!</Link>
                 </Paper>
@@ -44,11 +60,21 @@ class LoginComponent extends React.Component {
     }
 
     userTyping = (type, e) => {
-        console.log(type, e);
+        switch (type) {
+            case 'email':
+                this.setState({ email: e.target.value });
+                break;
+            case 'email':
+                this.setState({ password: e.target.value });
+                break;
+            default:
+                break;
+        }
     }
 
     submitLogin = (e) => {
-        console.log('SUBMITTING');
+        e.preventDefault();
+        console.log('SUBMITTING', this.state);
     }
 }
 
