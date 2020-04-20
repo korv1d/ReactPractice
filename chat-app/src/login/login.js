@@ -32,7 +32,7 @@ class LoginComponent extends React.Component {
                         </FormControl>
                         <FormControl required fullWidth margin='normal'>
                             <InputLabel htmlFor='login-password-input'>Enter Your Password</InputLabel>
-                            <Input type='password' autoComplete='password' autoFocus id='login-password-input' onChange={(e) => this.userTyping('password', e)}></Input>
+                            <Input type='password' autoComplete='password' id='login-password-input' onChange={(e) => this.userTyping('password', e)}></Input>
                         </FormControl>
                         <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>Login</Button>
                     </form>
