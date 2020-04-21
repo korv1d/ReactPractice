@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import
 import { Link } from 'react-router-dom';
 import styles from './styles';
 import FormControl from '@material-ui/core/FormControl';
@@ -15,6 +15,7 @@ const firebase = require("firebase");
 
 class LoginComponent extends React.Component {
 
+    //this is what the setState function accesses
     constructor() {
         super();
         this.state = {
@@ -25,9 +26,10 @@ class LoginComponent extends React.Component {
     }
 
     render() {
-
+	//ignore, save space
         const { classes } = this.props;
         return(
+	    //note: autoFocus => form starts with user typing in this object, only 1!
             <main className={classes.main}>
                 <CssBaseline></CssBaseline>
                 <Paper className={ classes.paper}>
@@ -46,6 +48,7 @@ class LoginComponent extends React.Component {
                         <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>Login</Button>
                     </form>
                     {
+			//if error not null: display error
                         this.state.loginError ?
                         <Typography component='h5' variant='h6' className={classes.errorText}>
                             Incorrect Login Information
@@ -59,6 +62,7 @@ class LoginComponent extends React.Component {
         );
     }
 
+    //on update: determine field, set field to user input
     userTyping = (type, e) => {
         switch (type) {
             case 'email':
@@ -74,6 +78,8 @@ class LoginComponent extends React.Component {
         }
     }
 
+    //on submit: reference firebase
+    //if user/pass match: goto dashboard. Else: set error and log
     submitLogin = (e) => {
         e.preventDefault();
         
