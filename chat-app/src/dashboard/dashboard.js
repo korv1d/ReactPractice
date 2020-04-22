@@ -4,7 +4,12 @@ import ChatListComponent from '../chatList/chatList.js';
 class DashboardComponent extends React.Component {
 
     render() {
-        return(<div>Hello world from Dashboard</div>);
+        return(
+            <div>
+                <div>Hello world from Dashboard</div>
+                <ChatListComponent></ChatListComponent>
+            </div>
+        );
     }
 }
 
