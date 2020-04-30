@@ -22,7 +22,9 @@ class ChatListComponent extends React.Component {
             return(
                 <div>
                     <main className={classes.root}>
-                        <Button variant='contained' fullWidth color='primary' className={classes.newChatBtn} onClick={this.newChat}></Button>
+                        <Button variant='contained' fullWidth color='primary' className={classes.newChatBtn} onClick={this.newChat}>
+                            New Message1
+                        </Button>
                         <List>
                             {
                                 //return list items depending on what chat we're looking at
@@ -58,6 +60,16 @@ class ChatListComponent extends React.Component {
                         </List>
                     </main>
                 </div>
+            );
+        }
+        else{
+            return(
+                <main className={classes.root}>
+                <Button variant='contained' fullWidth onClick={this.newChat} className={classes.newChatBtn}>
+                    New Message2
+                </Button>
+                <List></List>
+                </main>
             );
         }
             
