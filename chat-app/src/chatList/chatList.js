@@ -19,39 +19,44 @@ class ChatListComponent extends React.Component {
         const { classes } = this.props;
 
         return(
-            <main className={classes.root}>
-                <Button variant='contained' fullWidth color='primary' className={classes.newChatBtn} onClick={this.newChat}></Button>
-                <List>
-                    {
-                        //return list items depending on what chat we're looking at
-                        this.props.chats.map((_chat, _index) => {
-                            return(
-                                <ListItem onClick={() => this.selectChat(_index)} className={classes.listIten} selected={this.props.selectedChatIndex === _index} alignItems='flex-start'>
-                                    {/* set profile pic to first letter of name */}
-                                    <ListItemAvatar>
-                                        <Avatar alt='Remy Sharp'>  
-                                            {/* 0th index = person talk to, split('') means break into array of one char elements */}
-                                            {_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('')[0]}
-                                        </Avatar>
-                                    </ListItemAvatar>
-                                    <ListItemText primary={_chat.users.filter(_user => _user !== this.props.userEmail)[0]} secondary={
-                                        <React.Fragment>
-                                            <Typography component='span' color='textPrimary'>
-                                                {
-                                                    //display first 30 chars of last chat message
-                                                    _chat.messages[_chat.messages.length - 1].message.substring(0,30)
-                                                }
-                                            </Typography>
-                                        </React.Fragment>
-                                    }>
-                                    </ListItemText>
-                                </ListItem>
-                                <Divider></Divider>
-                            )
-                        })
-                    }
-                </List>
-            </main>
+            <div>
+                <main className={classes.root}>
+                    <Button variant='contained' fullWidth color='primary' className={classes.newChatBtn} onClick={this.newChat}></Button>
+                    <List>
+                        {
+                            //return list items depending on what chat we're looking at
+                            this.props.chats.map((_chat, _index) => {
+                                return(
+                                    // must give key bc be iterate through this
+                                    <div key={_index}>
+                                        <ListItem onClick={() => this.selectChat(_index)} className={classes.listIten} selected={this.props.selectedChatIndex === _index} alignItems='flex-start'>
+                                            {/* set profile pic to first letter of name */}
+                                            <ListItemAvatar>
+                                                <Avatar alt='Remy Sharp'>  
+                                                    {/* 0th index = person talk to, split('') means break into array of one char elements */}
+                                                    {_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('')[0]}
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary={_chat.users.filter(_user => _user !== this.props.userEmail)[0]} secondary={
+                                                <React.Fragment>
+                                                    <Typography component='span' color='textPrimary'>
+                                                        {
+                                                            //display first 30 chars of last chat message
+                                                            _chat.messages[_chat.messages.length - 1].message.substring(0,30)
+                                                        }
+                                                    </Typography>
+                                                </React.Fragment>
+                                            }>
+                                            </ListItemText>
+                                        </ListItem>
+                                        <Divider></Divider>
+                                    </div>
+                                )
+                            })
+                        }
+                    </List>
+                </main>
+            </div>
         );
     }
 
