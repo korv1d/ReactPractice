@@ -18,18 +18,18 @@ class DashboardComponent extends React.Component {
     }
 
     render() {
+
+        const classes = this.props;
         //because we do not use router to access chatList, do not have access to history prop
         return(
             <div>
-                <ChatListComponent histtory={this.props.history}
-                newChtBtnFn={this.newChatButtonClicked}
-                selectChatFn={this.selectChat}
-                chats={this.state.chats}
-                userEmail={this.state.email}
-                selectedChatIndex={this.state.selectedChat}></ChatListComponent>
+                <ChatListComponent history={this.props.history} newChtBtnFn={this.newChatButtonClicked} selectChatFn={this.selectChat} chats={this.state.chats} userEmail={this.state.email} selectedChatIndex={this.state.selectedChat}> </ChatListComponent>
+                <Button className={classes.signOutBtn} onClick={this.signOut}>Sign Out</Button>
             </div> 
         );
     }
+
+    signOut = () => firebase.auth().signOut();
 
     selectChat = (chatIndex) => {
         console.log('selected a chat', chatIndex); 
