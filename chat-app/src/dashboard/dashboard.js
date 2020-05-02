@@ -19,7 +19,7 @@ class DashboardComponent extends React.Component {
 
     render() {
 
-        const classes = this.props;
+        const { classes } = this.props;
         //because we do not use router to access chatList, do not have access to history prop
         return(
             <div>
