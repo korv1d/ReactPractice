@@ -21,7 +21,6 @@ class DashboardComponent extends React.Component {
         //because we do not use router to access chatList, do not have access to history prop
         return(
             <div>
-                <div>Hello world from Dashboard</div>
                 <ChatListComponent histtory={this.props.history}
                 newChtBtnFn={this.newChatButtonClicked}
                 selectChatFn={this.selectChat}
