@@ -65,7 +65,7 @@ class ChatListComponent extends React.Component {
         else{
             return(
                 <main className={classes.root}>
-                <Button variant='contained' fullWidth onClick={this.newChat} className={classes.newChatBtn}>
+                <Button variant='contained' fullWidth onClick={this.newChat} className={classes.newChatBtn} color='primary'>
                     New Message2
                 </Button>
                 <List></List>
@@ -80,6 +80,7 @@ class ChatListComponent extends React.Component {
     }
 
     selectChat = (index) => {
+        this.props.selectedChatFn(index)
         console.log('select chat', index);
     }
 }
