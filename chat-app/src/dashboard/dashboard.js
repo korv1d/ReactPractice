@@ -28,7 +28,11 @@ class DashboardComponent extends React.Component {
                 {
                     this.state.newChatFormVisible ? 
                     null:
-                    <ChatViewComponent></ChatViewComponent>
+                    <ChatViewComponent>
+                        user={this.state.user}
+                        chat={this.state.selectedChat}
+
+                    </ChatViewComponent>
 
                 }
                 <Button className={classes.signOutBtn} onClick={this.signOut}>Sign Out</Button>
@@ -41,7 +45,8 @@ class DashboardComponent extends React.Component {
     }
 
     selectChat = (chatIndex) => {
-        console.log('selected a chat', chatIndex); 
+        this.setState({ selectedChat: chatIndex})
+        console.log('index:', chatIndex); 
     }
 
     //user should not be on dashboard if not signed in, redirect to log in

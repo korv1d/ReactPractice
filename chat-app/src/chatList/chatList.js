@@ -80,7 +80,7 @@ class ChatListComponent extends React.Component {
     }
 
     selectChat = (index) => {
-        this.props.selectedChatFn(index)
+        this.props.selectChatFn(index)
         console.log('select chat', index);
     }
 }
