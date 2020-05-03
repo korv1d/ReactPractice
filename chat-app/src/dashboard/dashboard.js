@@ -25,13 +25,20 @@ class DashboardComponent extends React.Component {
         return(
             <div>
                 <ChatListComponent history={this.props.history} newChtBtnFn={this.newChatButtonClicked} selectChatFn={this.selectChat} chats={this.state.chats} userEmail={this.state.email} selectedChatIndex={this.state.selectedChat}> </ChatListComponent>
-                <ChatViewComponent></ChatViewComponent>
+                {
+                    this.state.newChatFormVisible ? 
+                    null:
+                    <ChatViewComponent></ChatViewComponent>
+
+                }
                 <Button className={classes.signOutBtn} onClick={this.signOut}>Sign Out</Button>
             </div> 
         );
     }
 
-    signOut = () => firebase.auth().signOut();
+    signOut = () => {
+        firebase.auth().signOut();
+    }
 
     selectChat = (chatIndex) => {
         console.log('selected a chat', chatIndex); 
