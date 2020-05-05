@@ -43,5 +43,5 @@ serviceWorker.unregister();
 
 // https://console.firebase.google.com/u/0/project/im-tutorial-bbb9b/overview
 // https://github.com/Zackazt/React-Chat-Tutorial/blob/master/src/Signup/styles.js
-// https://www.youtube.com/watch?v=uAu4iu8PTZs
+// https://www.youtube.com/watch?v=NYXz20o6KlM&t=1946s
 
